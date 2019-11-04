@@ -14,6 +14,6 @@
 
 <style scoped>
     .el-menu-demo{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 </style>

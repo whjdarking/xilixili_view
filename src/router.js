@@ -21,6 +21,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
+      path: '/video/:videoID',
+      name: 'showVideo',
+      component: () => import(/* webpackChunkName: "about" */ './views/ShowVideo.vue')
+    },
+    {
       path: '/postvideo',
       name: 'postVideo',
       // route level code-splitting

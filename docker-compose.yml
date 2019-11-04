@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  vue:
+    image: registry.ap-northeast-1.aliyuncs.com/darking/xili-vue
+    restart: always
+    ports:
+      - 3001:80
