@@ -1,8 +1,8 @@
 <template>
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router="true">
-        <el-menu-item index="/">首页</el-menu-item>
-        <el-menu-item index="/postvideo">投稿视频</el-menu-item>
-        <el-menu-item index="/about">关于</el-menu-item>
+    <el-menu class="el-menu-demo" mode="horizontal" text-color="#949390" router>
+        <el-menu-item index="/" style="font-weight: bold">首页</el-menu-item>
+        <el-menu-item index="/postvideo" style="font-weight: bold">投稿视频</el-menu-item>
+        <el-menu-item index="/about" style="font-weight: bold">关于</el-menu-item>
     </el-menu>
 </template>
 

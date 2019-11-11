@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <top_navi></top_navi>
     <router-view></router-view>
   </div>
@@ -17,5 +17,18 @@ export default {
 </script>
 
 <style>
+  .app{
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 2500px) {
+    .abc {width: 2400px}
+  }
+  @media screen and (min-width: 2000px) {
+    .abc {width: 1400px}
+  }
+  @media screen and (min-width: 1610px) {
+    .abc {width: 1100px}
+  }
 
 </style>

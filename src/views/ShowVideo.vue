@@ -7,9 +7,13 @@
                 {{video.view}}观赏
             </div>
         </div>
-        <video-player class="video-player-box"
-                      :options="playerOptions">
-        </video-player>
+        <div class="player">
+            <video-player class="video-player-box"
+                          ref="videoPlayer"
+                          :playsinline="true"
+                          :options="playerOptions">
+            </video-player>
+        </div>
         <div class="video-info">
             <pre>{{video.info}}</pre>
         </div>
@@ -35,6 +39,12 @@
                         type: "video/mp4",
                         src: "",
                     }],
+                    controlBar: {
+                        timeDivider: true,
+                        durationDisplay: true,
+                        remainingTimeDisplay: false,
+                        fullscreenToggle: true
+                    }
                     // poster: "/static/images/author.jpg",
                 }
             }
