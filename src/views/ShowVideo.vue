@@ -88,6 +88,7 @@
         color: #999;
     }
     .video-info {
+        font-weight: bold;
         color: #111;
     }
 </style>

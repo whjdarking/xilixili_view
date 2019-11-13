@@ -3,7 +3,7 @@
     <el-row :gutter="10">
       <el-col :span="4" v-for="video in videos" :key="video.id">
         <el-card class="video-card" @click.native="goVideo(video)" :body-style="{ padding: '5px' }" shadow="hover">
-          <img class="image" src="../assets/1600.jpg">
+          <img class="image" :src="video.avatar">
           <div>
             <div class="video-title" style="font-weight:bolder" >{{video.title}}</div>
             <div>
@@ -55,6 +55,14 @@ export default {
         //data包含id，title，info等 这种东西，其他有什么code，msg之类的
         this.videos = res.data.items
         this.total = res.data.total
+        //如果没有封面则使用默认封面
+        for (let item of this.videos) {
+          // eslint-disable-next-line no-console
+          //console.log(typeof item.avatar, item.avatar,item);
+          if (item.avatar.length <= 1) {
+            item.avatar = "/default.jpg"
+          }
+        }
       })
     },
     goVideo(video) {
