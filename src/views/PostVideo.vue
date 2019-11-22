@@ -1,17 +1,17 @@
 <template>
     <div class="post-video">
         <h2>欢迎投稿：</h2>
-        <el-form ref="form" :model="form" label-width="80px">
-            <el-form-item label="标题">
+        <el-form ref="form" :model="form" label-position="left" label-width="150px">
+            <el-form-item label="标题 Title">
                 <el-input v-model="form.title"></el-input>
             </el-form-item>
-            <el-form-item label="视频地址">
-                <el-input type="url" v-model="form.url"></el-input>
+            <el-form-item label="视频地址 Address">
+                <el-input type="url" v-model="form.url" placeholder="Should be an accessible address ending with .mp4"></el-input>
             </el-form-item>
-            <el-form-item label="描述">
+            <el-form-item label="描述 Description">
                 <el-input type="textarea" v-model="form.info"></el-input>
             </el-form-item>
-            <el-form-item label="视频封面">
+            <el-form-item label="视频封面 Post">
                 <el-upload
                      class="avatar-uploader"
                      action=""
