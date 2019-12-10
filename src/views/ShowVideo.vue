@@ -23,7 +23,7 @@
             </el-header>
             <el-main>
                 <div>
-                    <VPlayer class="video-self" :options="videoOptions"></VPlayer>
+                    <VPlayer class="" :options="videoOptions"></VPlayer>
                 </div>
                 <el-divider>Video Describe</el-divider>
                 <div>
@@ -56,18 +56,26 @@
                     aspectRatio: '16:9',
                     preload: 'auto',
 
-                    playbackRates: [0.5, 1.0, 1.5, 2.0],
                     sources: [{
                         type: "video/mp4",
                         src: "",
                     }],
-                    controlBar: {
-                        timeDivider: true,
-                        currentTimeDisplay: true,
-                        durationDisplay: true,
-                        remainingTimeDisplay: false,
-                        fullscreenToggle: true
-                    },
+                    children: [
+                        'bigPlayButton',
+                        'controlBar'
+                    ],
+                    // controlBar: {
+                    //     children: [
+                    //         "playToggle",
+                    //         "volumePanel",
+                    //         "currentTimeDisplay",
+                    //         "timeDivider",
+                    //         "durationDisplay",
+                    //         "progressControl",
+                    //         "playbackRateMenuButton",
+                    //         "fullscreenToggle"
+                    //     ]
+                    // },
                     errorDisplay: true,
                 }
             }
