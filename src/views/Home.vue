@@ -57,8 +57,6 @@ export default {
         this.total = res.data.total
         //如果没有封面则使用默认封面
         for (let item of this.videos) {
-          // eslint-disable-next-line no-console
-          //console.log(typeof item.avatar, item.avatar,item);
           if (item.avatar.length <= 1) {
             item.avatar = "/default.jpg"
           }
