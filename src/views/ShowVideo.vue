@@ -17,7 +17,7 @@
         <el-container>
             <el-header>
                 <div class="video-title">{{ video.title }}</div>
-                <div class="video-data">
+                <div class="video-data" style="padding: 0 0 5px 0">
                     {{ video.belong }} 创建 ·
                     {{ video.view }}播放
                 </div>

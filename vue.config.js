@@ -1,6 +1,6 @@
 module.exports = {
     devServer: {
-        proxy: '47.242.143.52'//这样只在kubernetes起作用，back-service是后端的dns
-        // proxy: 'localhost:3000'
+        proxy: 'localhost:3000'//在kubernetes（容器打包后）不起作用，在kubernetes内利用ingress等分配前后端路由
+
     }
 }

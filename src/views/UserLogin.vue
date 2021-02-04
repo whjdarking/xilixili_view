@@ -65,6 +65,12 @@ export default {
                         message: res.msg,
                         duration: 0
                     })
+                } else {
+                    this.$notify({
+                        title: '注册成功',
+                        message: '请手动在右侧登录',
+                        duration: 0
+                    })
                 }
             }).catch((error) => {
                 this.$notify({
@@ -80,6 +86,12 @@ export default {
                     this.$notify({
                         title: '登录失败(后端)',
                         message: res.msg,
+                        duration: 0
+                    })
+                } else {
+                    this.$notify({
+                        title: '登录成功',
+                        message: res.data.user_name,
                         duration: 0
                     })
                 }
