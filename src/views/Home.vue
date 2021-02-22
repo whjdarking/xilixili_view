@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <el-row :gutter="10">
+        <el-row :gutter="10" class="el-row">
             <el-col :span="4" v-for="video in videos" :key="video.id">
                 <el-card class="video-card" @click.native="goVideo(video)" :body-style="{ padding: '5px' }"
                          shadow="hover">
@@ -110,5 +110,9 @@ export default {
 .video-card {
     cursor: pointer;
     margin-bottom: 10px;
+}
+.el-row {
+    display: flex;
+    flex-wrap: wrap
 }
 </style>
